@@ -1,19 +1,124 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+    <!-- VIEWPORT & RENDER -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- ✅ SEO & Meta Tags (American English) -->
-    <title>LipoWave™ Official Website | Now Liposlend Drops</title>
-    <meta name="description" content="LipoWave has officially been renamed to Liposlend Drops. The same powerful formula you trust. Official store.">
-    <link rel="canonical" href="https://lipowave.24offers.shop/">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="faviconV2 (5).png">
+    <link rel="apple-touch-icon" href="faviconV2 (5).png">
+
+    <!-- SEO CORE -->
+    <title>LipoWave™ Official | Weight Loss Support Drops - Order Now</title>
+    <meta name="description" content="LipoWave™ official site. Natural weight management support formula. Fast shipping, secure checkout. Order LipoWave today.">
+    <meta name="keywords" content="LipoWave, LipoWave official, LipoWave drops, weight loss support, metabolism support, fat burn supplement, LipoWave USA, LipoWave Canada, LipoWave UK, LipoWave Australia, LipoWave NZ, LipoWave Ireland">
+
+    <!-- INDEXING -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://lipowave.offersnowx.shop/">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LipoWave™ Official | Weight Loss Support Drops">
+    <meta property="og:description" content="Support your metabolism with LipoWave™. Natural formula. Order from the official website.">
+    <meta property="og:url" content="https://lipowave.offersnowx.shop/">
+    <meta property="og:image" content="https://lipowave.offersnowx.shop/assets/img/product.png">
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LipoWave™ Official | Weight Loss Support Drops">
+    <meta name="twitter:description" content="Natural metabolism support formula. Order LipoWave™ today.">
+    <meta name="twitter:image" content="https://lipowave.offersnowx.shop/assets/img/product.png">
+
+    <!-- PERFORMANCE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+
+    <!-- PRELOAD MAIN IMAGE -->
+    <link rel="preload" as="image" href="https://lipowave.offersnowx.shop/assets/img/product.png">
 
     <!-- Frameworks -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD PRODUCT -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "LipoWave",
+      "image": "https://lipowave.offersnowx.shop/assets/img/product.png",
+      "description": "LipoWave is a natural dietary supplement designed to support metabolism and weight management.",
+      "brand": {
+        "@type": "Brand",
+        "name": "LipoWave"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://lipowave.offersnowx.shop/",
+        "priceCurrency": "USD",
+        "price": "49.00",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is LipoWave?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LipoWave is a dietary supplement designed to support metabolism and healthy weight management."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you use LipoWave?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use LipoWave as directed on the product label for best results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I buy LipoWave?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LipoWave is available through the official website with secure checkout and shipping options."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD WEBSITE -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://lipowave.offersnowx.shop/",
+      "name": "LipoWave Official",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://lipowave.offersnowx.shop/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 
     <style>
         body { 
@@ -25,7 +130,7 @@
             overflow: hidden; 
         }
         
-        /* Imagem de fundo nítida */
+        /* Imagens de fundo nítidas */
         .page-bg {
             position: fixed;
             inset: 0;
@@ -52,6 +157,8 @@
             justify-content: center;
             z-index: 50;
             padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
         /* Modal Compacto */
@@ -72,7 +179,7 @@
             to { transform: scale(1); opacity: 1; }
         }
 
-        /* Botão X redirecionando para a oferta */
+        /* O botão X redireciona para a oferta */
         .close-link {
             position: absolute;
             top: 1rem;
@@ -127,12 +234,13 @@
     <div id="modalOverlay" class="overlay">
         <div class="trademark-modal">
             
+            <!-- Link no botão de fechar -->
             <a href="https://mwebora.com/8922/1671/7/??" class="close-link">
                 <i data-lucide="x" class="w-4 h-4"></i>
             </a>
 
             <div class="mb-6 flex justify-center">
-                <img src="images/lipowave-liposlend.png" alt="LipoWave to Liposlend" class="max-w-[220px] h-auto pointer-events-none">
+                <img src="images/lipowave-liposlend.png" alt="Transição LipoWave para Liposlend" class="max-w-[220px] h-auto pointer-events-none">
             </div>
 
             <div class="space-y-3 mb-8">
@@ -153,6 +261,7 @@
                 </p>
             </div>
 
+            <!-- Link no botão de continuar -->
             <a href="https://mwebora.com/8922/1671/7/??" class="btn-continue">
                 CONTINUE
             </a>
