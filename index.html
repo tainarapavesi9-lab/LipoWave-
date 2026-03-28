@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de-DE">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
@@ -14,9 +14,9 @@
         })(window, document, "clarity", "script", "w2pql1315q");
     </script>
     
-    <!-- ✅ SEO & Meta Tags -->
-    <title>LipoWave™ Offizielle Website Deutschland | Jetzt Liposlend Drops</title>
-    <meta name="description" content="LipoWave ist jetzt Liposlend Drops. Die gleiche bewährte Formel unter neuem Namen. Offizielle Herstellerseite Deutschland.">
+    <!-- ✅ SEO & Meta Tags (American English) -->
+    <title>LipoWave™ Official Website | Now Liposlend Drops</title>
+    <meta name="description" content="LipoWave has officially been renamed to Liposlend Drops. The same powerful formula you trust. Official store.">
     <link rel="canonical" href="https://lipowave.24offers.shop/">
 
     <!-- Frameworks -->
@@ -50,43 +50,44 @@
             }
         }
 
-        /* Overlay semi-transparente para dar destaque ao modal */
+        /* Overlay sem o efeito de blur (desfoque) conforme solicitado */
         .overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.75);
-            backdrop-filter: blur(4px);
-            display: flex;
+            background: rgba(0, 0, 0, 0.85); /* Fundo escuro levemente mais opaco para contraste */
+            display: none; /* Começa escondido para o delay */
             align-items: center;
             justify-content: center;
             z-index: 50;
             padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.5s ease;
         }
 
-        /* Design do Modal inspirado na captura de tela */
+        /* Modal Reduzido: max-width de 480px para 400px */
         .trademark-modal {
             background: white;
             width: 100%;
-            max-width: 480px;
-            border-radius: 2rem;
+            max-width: 400px; 
+            border-radius: 1.5rem;
             position: relative;
-            padding: 2rem;
+            padding: 2rem 1.5rem;
             text-align: center;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             animation: modalPop 0.4s cubic-bezier(0.17, 0.89, 0.32, 1.28);
         }
 
         @keyframes modalPop {
-            from { transform: scale(0.8); opacity: 0; }
+            from { transform: scale(0.9); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
         }
 
         .close-btn {
             position: absolute;
-            top: 1.25rem;
-            right: 1.25rem;
-            width: 32px;
-            height: 32px;
+            top: 1rem;
+            right: 1rem;
+            width: 28px;
+            height: 28px;
             background: #333;
             color: white;
             border-radius: 50%;
@@ -100,76 +101,76 @@
         .close-btn:hover { background: #000; }
 
         .btn-continue {
-            background: #0a3121; /* Verde escuro da imagem */
+            background: #0a3121; 
             color: white;
             width: 100%;
-            padding: 1.25rem;
-            border-radius: 1rem;
+            padding: 1rem;
+            border-radius: 0.75rem;
             font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             transition: all 0.2s;
-            box-shadow: 0 10px 15px -3px rgba(10, 49, 33, 0.3);
+            box-shadow: 0 8px 15px -3px rgba(10, 49, 33, 0.3);
             display: block;
             text-decoration: none;
         }
 
         .btn-continue:hover {
             background: #061f15;
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
 
         .highlight-green {
-            color: #00a300; /* Verde vibrante da imagem */
+            color: #00a300; 
             font-weight: 800;
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Fundo da Página -->
+    <!-- Imagem de fundo nítida -->
     <div class="page-bg"></div>
 
-    <!-- Modal de Aviso (Substituindo o Cookie Banner) -->
+    <!-- Modal de Aviso -->
     <div id="modalOverlay" class="overlay">
         <div class="trademark-modal">
-            <!-- Botão Fechar -->
+            <!-- Botão fechar -->
             <div class="close-btn" onclick="closeModal()">
-                <i data-lucide="x" class="w-5 h-5"></i>
+                <i data-lucide="x" class="w-4 h-4"></i>
             </div>
 
-            <!-- Imagem do Produto (Comparativo) -->
-            <div class="mb-6 flex justify-center">
-                <img src="images/lipowave-liposlend.png" alt="LipoWave to Liposlend" class="max-w-[280px] h-auto pointer-events-none">
+            <!-- Imagem do produto um pouco menor -->
+            <div class="mb-5 flex justify-center">
+                <img src="images/lipowave-liposlend.png" alt="LipoWave to Liposlend" class="max-w-[220px] h-auto pointer-events-none">
             </div>
 
-            <!-- Conteúdo de Texto -->
-            <div class="space-y-4 mb-8">
-                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 leading-tight uppercase">
+            <!-- Conteúdo textual -->
+            <div class="space-y-3 mb-6">
+                <h2 class="text-lg sm:text-xl font-bold text-slate-900 leading-tight uppercase">
                     DUE TO TRADEMARK REGULATIONS
                 </h2>
-                <p class="text-lg text-slate-700 font-medium">
-                    In <span class="font-bold">Germany</span> and your state,
+                <p class="text-base text-slate-700 font-medium">
+                    In <span class="font-bold">Kansas</span> and your state,
                 </p>
-                <p class="text-lg text-slate-700">
+                <p class="text-base text-slate-700">
                     <span class="font-bold">Lipowave</span> is now officially renamed as
                 </p>
-                <div class="text-3xl sm:text-4xl highlight-green tracking-tight">
+                <div class="text-2xl sm:text-3xl highlight-green tracking-tight">
                     LIPOSLEND Drops
                 </div>
-                <p class="text-lg text-slate-800 font-semibold">
+                <p class="text-sm text-slate-800 font-semibold">
                     The formula remains exactly the same!
                 </p>
             </div>
 
-            <!-- Botão de Ação -->
+            <!-- Botão de ação -->
             <a href="https://mwebora.com/8922/1671/7/??" class="btn-continue">
                 CONTINUE
             </a>
 
             <!-- Contador -->
-            <p id="timer" class="mt-4 text-slate-500 text-sm font-medium">
+            <p id="timer" class="mt-4 text-slate-500 text-[12px] font-medium">
                 Closes automatically in 15s
             </p>
         </div>
@@ -178,34 +179,46 @@
     <script>
         lucide.createIcons();
 
-        // Lógica do Cronômetro
         let timeLeft = 15;
+        let countdownInterval;
         const timerElement = document.getElementById('timer');
         const modalOverlay = document.getElementById('modalOverlay');
 
-        const countdown = setInterval(() => {
-            timeLeft--;
-            if (timeLeft <= 0) {
-                clearInterval(countdown);
-                closeModal();
-            } else {
-                timerElement.innerText = `Closes automatically in ${timeLeft}s`;
-            }
-        }, 1000);
+        // Função para iniciar o contador
+        function startTimer() {
+            countdownInterval = setInterval(() => {
+                timeLeft--;
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval);
+                    closeModal();
+                } else {
+                    timerElement.innerText = `Closes automatically in ${timeLeft}s`;
+                }
+            }, 1000);
+        }
+
+        // Delay de 3 segundos para abrir o modal
+        window.onload = function() {
+            setTimeout(() => {
+                modalOverlay.style.display = 'flex';
+                setTimeout(() => {
+                    modalOverlay.style.opacity = '1';
+                    startTimer();
+                }, 50);
+            }, 3000); // 3000ms = 3 segundos
+        };
 
         function closeModal() {
             modalOverlay.style.opacity = '0';
-            modalOverlay.style.transition = 'opacity 0.4s ease';
             setTimeout(() => {
                 modalOverlay.style.display = 'none';
-            }, 400);
-            clearInterval(countdown);
+                clearInterval(countdownInterval);
+            }, 500);
         }
 
-        // Prevenir fechamento ao clicar fora por segurança (opcional)
-        // modalOverlay.addEventListener('click', (e) => {
-        //     if(e.target === modalOverlay) closeModal();
-        // });
+        document.addEventListener('keydown', (e) => { 
+            if (e.key === 'Escape') closeModal(); 
+        });
     </script>
 </body>
 </html>
