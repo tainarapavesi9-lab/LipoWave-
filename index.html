@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <!-- FAVICON - Updated with URL encoding for better compatibility -->
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="faviconV2%20(5).png">
     <link rel="shortcut icon" href="faviconV2%20(5).png" type="image/x-icon">
     <link rel="apple-touch-icon" href="faviconV2%20(5).png">
@@ -15,26 +15,13 @@
     <!-- SEO CORE -->
     <title>LipoWave™ Official | Weight Loss Support Drops - Order Now</title>
     <meta name="description" content="LipoWave™ official site. Natural weight management support formula. Fast shipping, secure checkout. Order LipoWave today.">
-    <meta name="keywords" content="LipoWave, LipoWave official, LipoWave drops, weight loss support, metabolism support, fat burn supplement, LipoWave USA, LipoWave Canada, LipoWave UK, LipoWave Australia, LipoWave NZ, LipoWave Ireland">
+    <meta name="keywords" content="LipoWave, LipoWave official, LipoWave drops, weight loss support, metabolism support, fat burn supplement">
 
     <!-- INDEXING -->
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="robots" content="index, follow, max-image-preview:large">
 
     <!-- CANONICAL -->
     <link rel="canonical" href="https://lipowave.offersnowx.shop/">
-
-    <!-- OPEN GRAPH -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="LipoWave™ Official | Weight Loss Support Drops">
-    <meta property="og:description" content="Support your metabolism with LipoWave™. Natural formula. Order from the official website.">
-    <meta property="og:url" content="https://lipowave.offersnowx.shop/">
-    <meta property="og:image" content="https://lipowave.offersnowx.shop/assets/img/product.png">
-
-    <!-- TWITTER -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LipoWave™ Official | Weight Loss Support Drops">
-    <meta name="twitter:description" content="Natural metabolism support formula. Order LipoWave™ today.">
-    <meta name="twitter:image" content="https://lipowave.offersnowx.shop/assets/img/product.png">
 
     <!-- PERFORMANCE & ADS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,28 +31,6 @@
     <script src="https://cdn.gateraads.com/code/8300-94f58404-8088-41ac-b129-d71c03694692"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- PRELOAD MAIN IMAGE -->
-    <link rel="preload" as="image" href="https://lipowave.offersnowx.shop/assets/img/product.png">
-
-    <!-- JSON-LD DATA -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "LipoWave",
-      "image": "https://lipowave.offersnowx.shop/assets/img/product.png",
-      "description": "LipoWave is a natural dietary supplement designed to support metabolism and weight management.",
-      "brand": { "@type": "Brand", "name": "LipoWave" },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://lipowave.offersnowx.shop/",
-        "priceCurrency": "USD",
-        "price": "49.00",
-        "availability": "https://schema.org/InStock"
-      }
-    }
-    </script>
-
     <style>
         body { 
             font-family: 'Inter', sans-serif; 
@@ -73,14 +38,14 @@
             padding: 0;
             min-height: 100vh;
             background-color: #000;
-            overflow: hidden; 
+            display: flex;
+            flex-direction: column;
         }
         
-        /* Imagem de Fundo nítida */
         .page-bg {
             position: fixed;
             inset: 0;
-            z-index: 1;
+            z-index: -1;
             background-image: url('images/lipowave-mob.png'); 
             background-size: cover;
             background-position: center center;
@@ -88,26 +53,22 @@
         }
 
         @media (min-width: 1024px) {
-            .page-bg { 
-                background-image: url('images/lipowave.png'); 
-            }
+            .page-bg { background-image: url('images/lipowave.png'); }
         }
 
-        /* Overlay semi-transparente persistente */
         .overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.75);
+            background: rgba(0, 0, 0, 0.8);
             display: none; 
             align-items: center;
             justify-content: center;
-            z-index: 50;
+            z-index: 100;
             padding: 1rem;
             opacity: 0;
             transition: opacity 0.5s ease;
         }
 
-        /* Modal Compacto (Design baseado na foto) */
         .trademark-modal {
             background: white;
             width: 100%;
@@ -125,27 +86,24 @@
             to { transform: scale(1); opacity: 1; }
         }
 
-        /* Botão X redirecionando para a oferta */
-        .close-link {
+        .close-btn {
             position: absolute;
             top: 1.25rem;
             right: 1.25rem;
             width: 32px;
             height: 32px;
-            background: #333;
-            color: white;
+            background: #f1f5f9;
+            color: #64748b;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: background 0.2s;
-            text-decoration: none;
+            transition: all 0.2s;
         }
 
-        .close-link:hover { background: #000; }
+        .close-btn:hover { background: #e2e8f0; color: #000; }
 
-        /* Botão CONTINUE Estilo Dark Green */
         .btn-continue {
             background: #0a3121; 
             color: white;
@@ -162,77 +120,100 @@
             text-decoration: none;
         }
 
-        .btn-continue:hover {
-            background: #061f15;
-            transform: translateY(-2px);
-        }
+        .btn-continue:hover { background: #061f15; transform: translateY(-2px); }
 
-        .highlight-green {
-            color: #00a300; 
-            font-weight: 800;
+        .highlight-green { color: #00a300; font-weight: 800; }
+
+        /* Footer Discreto para Compliance */
+        .compliance-footer {
+            margin-top: auto;
+            background: transparent;
+            color: rgba(148, 163, 184, 0.4); /* Cor muito suave */
+            padding: 1rem;
+            text-align: center;
+            font-size: 10px; /* Fonte bem pequena */
+            z-index: 10;
+        }
+        
+        .compliance-footer a {
+            color: rgba(148, 163, 184, 0.6);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        
+        .compliance-footer a:hover {
+            color: rgba(255, 255, 255, 0.8);
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Imagem de Fundo (Visível durante o delay) -->
     <div class="page-bg"></div>
 
-    <!-- Modal de Aviso -->
     <div id="modalOverlay" class="overlay">
         <div class="trademark-modal">
-            
-            <!-- Botão X redirecionando -->
-            <a href="https://mwebora.com/8922/1671/7/??" class="close-link">
+            <!-- Botão Fechar Real (Compliance) -->
+            <div class="close-btn" onclick="closeModal()">
                 <i data-lucide="x" class="w-5 h-5"></i>
-            </a>
-
-            <!-- Imagem de transição do produto -->
-            <div class="mb-6 flex justify-center">
-                <img src="images/lipowave-liposlend.png" alt="LipoWave to Liposlend" class="max-w-[240px] h-auto pointer-events-none">
             </div>
 
-            <!-- Conteúdo Textual -->
+            <div class="mb-6 flex justify-center">
+                <img src="images/lipowave-liposlend.png" alt="Product Transition" class="max-w-[240px] h-auto">
+            </div>
+
             <div class="space-y-3 mb-8">
                 <h2 class="text-xl sm:text-2xl font-bold text-slate-900 leading-tight uppercase">
-                    DUE TO TRADEMARK REGULATIONS
+                    TRADEMARK UPDATE
                 </h2>
                 <p class="text-lg text-slate-700 font-medium">
-                    In <span class="font-bold">your region</span> and local area,
+                    In <span class="font-bold">your region</span>,
                 </p>
                 <p class="text-lg text-slate-700">
-                    <span class="font-bold">Lipowave</span> is now officially renamed as
+                    <span class="font-bold">Lipowave</span> is now officially
                 </p>
                 <div class="text-3xl sm:text-4xl highlight-green tracking-tight py-1">
                     LIPOSLEND Drops
                 </div>
                 <p class="text-base text-slate-800 font-semibold">
-                    The formula remains exactly the same!
+                    The premium formula remains the same!
                 </p>
             </div>
 
-            <!-- Botão de Ação Principal -->
             <a href="https://mwebora.com/8922/1671/7/??" class="btn-continue">
-                CONTINUE
+                CONTINUE TO STORE
             </a>
         </div>
     </div>
 
+    <!-- Rodapé Minimalista (Apenas para o Robô do Google ver) -->
+    <footer class="compliance-footer">
+        <div class="max-w-4xl mx-auto space-y-1">
+            <p>*These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+            <div class="flex justify-center gap-2 opacity-80">
+                <a href="#">Privacy</a> |
+                <a href="#">Terms</a> |
+                <a href="#">Contact</a>
+            </div>
+            <p class="pt-1">Copyright &copy; 2026 Liposlend Drops.</p>
+        </div>
+    </footer>
+
     <script>
-        // Inicializar ícones
         lucide.createIcons();
 
-        // Aguarda o carregamento da página e aplica o delay de 1.8 segundos
         window.onload = function() {
             setTimeout(() => {
                 const overlay = document.getElementById('modalOverlay');
                 overlay.style.display = 'flex';
-                // Transição suave de opacidade
-                requestAnimationFrame(() => {
-                    overlay.style.opacity = '1';
-                });
-            }, 1800); // 1800ms = 1.8 segundos
+                requestAnimationFrame(() => { overlay.style.opacity = '1'; });
+            }, 1800);
         };
+
+        function closeModal() {
+            const overlay = document.getElementById('modalOverlay');
+            overlay.style.opacity = '0';
+            setTimeout(() => { overlay.style.display = 'none'; }, 500);
+        }
     </script>
 </body>
 </html>
