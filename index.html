@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- ✅ SEO & Meta Tags (Inglês Americano) -->
+    <!-- ✅ SEO & Meta Tags (American English) -->
     <title>LipoWave™ Official Website | Now Liposlend Drops</title>
     <meta name="description" content="LipoWave has officially been renamed to Liposlend Drops. The same powerful formula you trust. Official store.">
     <link rel="canonical" href="https://lipowave.24offers.shop/">
@@ -42,7 +42,7 @@
             }
         }
 
-        /* Overlay escuro persistente (não sai da tela) */
+        /* Overlay escuro persistente */
         .overlay {
             position: fixed;
             inset: 0;
@@ -54,7 +54,7 @@
             padding: 1rem;
         }
 
-        /* Modal Compacto seguindo o design da imagem */
+        /* Modal Compacto */
         .trademark-modal {
             background: white;
             width: 100%;
@@ -72,7 +72,7 @@
             to { transform: scale(1); opacity: 1; }
         }
 
-        /* Botão de fechar (X) agora é um link para a oferta */
+        /* Botão X redirecionando para a oferta */
         .close-link {
             position: absolute;
             top: 1rem;
@@ -90,11 +90,9 @@
             text-decoration: none;
         }
 
-        .close-link:hover { 
-            background: #000; 
-        }
+        .close-link:hover { background: #000; }
 
-        /* Botão CONTINUE principal */
+        /* Botão CONTINUE */
         .btn-continue {
             background: #0a3121; 
             color: white;
@@ -124,30 +122,25 @@
 </head>
 <body class="antialiased">
 
-    <!-- Fundo da página -->
     <div class="page-bg"></div>
 
-    <!-- Modal de Aviso (Persistente/Informativo) -->
     <div id="modalOverlay" class="overlay">
         <div class="trademark-modal">
             
-            <!-- O botão 'X' agora redireciona para o link -->
             <a href="https://mwebora.com/8922/1671/7/??" class="close-link">
                 <i data-lucide="x" class="w-4 h-4"></i>
             </a>
 
-            <!-- Imagem de transição do produto -->
             <div class="mb-6 flex justify-center">
                 <img src="images/lipowave-liposlend.png" alt="LipoWave to Liposlend" class="max-w-[220px] h-auto pointer-events-none">
             </div>
 
-            <!-- Conteúdo textual em Inglês -->
             <div class="space-y-3 mb-8">
                 <h2 class="text-lg sm:text-xl font-bold text-slate-900 leading-tight uppercase">
                     DUE TO TRADEMARK REGULATIONS
                 </h2>
                 <p class="text-base text-slate-700 font-medium">
-                    In <span class="font-bold">Kansas</span> and your state,
+                    In <span class="font-bold">your region</span> and local area,
                 </p>
                 <p class="text-base text-slate-700">
                     <span class="font-bold">Lipowave</span> is now officially renamed as
@@ -160,7 +153,6 @@
                 </p>
             </div>
 
-            <!-- Botão CONTINUE redirecionando para a oferta -->
             <a href="https://mwebora.com/8922/1671/7/??" class="btn-continue">
                 CONTINUE
             </a>
@@ -168,10 +160,8 @@
     </div>
 
     <script>
-        // Inicializa os ícones do Lucide
         lucide.createIcons();
 
-        // O modal abre imediatamente ao carregar e não possui lógica de fechamento (closeModal removido)
         window.onload = function() {
             const overlay = document.getElementById('modalOverlay');
             overlay.style.display = 'flex';
