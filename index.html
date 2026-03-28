@@ -7,9 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="faviconV2 (5).png">
-    <link rel="apple-touch-icon" href="faviconV2 (5).png">
+    <!-- FAVICON - Updated with URL encoding for better compatibility -->
+    <link rel="icon" type="image/png" href="faviconV2%20(5).png">
+    <link rel="shortcut icon" href="faviconV2%20(5).png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="faviconV2%20(5).png">
 
     <!-- SEO CORE -->
     <title>LipoWave™ Official | Weight Loss Support Drops - Order Now</title>
@@ -75,11 +76,11 @@
             overflow: hidden; 
         }
         
-        /* Fundo da Página - Garantindo visibilidade */
+        /* Imagem de Fundo nítida */
         .page-bg {
             position: fixed;
             inset: 0;
-            z-index: 1; /* Fica acima do body mas abaixo do overlay */
+            z-index: 1;
             background-image: url('images/lipowave-mob.png'); 
             background-size: cover;
             background-position: center center;
@@ -92,21 +93,21 @@
             }
         }
 
-        /* Overlay semi-transparente para focar no modal sem esconder o fundo totalmente */
+        /* Overlay semi-transparente persistente */
         .overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex; 
+            background: rgba(0, 0, 0, 0.75);
+            display: none; 
             align-items: center;
             justify-content: center;
             z-index: 50;
             padding: 1rem;
             opacity: 0;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.5s ease;
         }
 
-        /* Modal Compacto (Estilo Cookie/Aviso da Foto) */
+        /* Modal Compacto (Design baseado na foto) */
         .trademark-modal {
             background: white;
             width: 100%;
@@ -124,7 +125,7 @@
             to { transform: scale(1); opacity: 1; }
         }
 
-        /* X redirecionando para a oferta */
+        /* Botão X redirecionando para a oferta */
         .close-link {
             position: absolute;
             top: 1.25rem;
@@ -174,19 +175,19 @@
 </head>
 <body class="antialiased">
 
-    <!-- Imagem de Fundo (Página) -->
+    <!-- Imagem de Fundo (Visível durante o delay) -->
     <div class="page-bg"></div>
 
-    <!-- Modal de Aviso (Formato de Cookie Centralizado) -->
+    <!-- Modal de Aviso -->
     <div id="modalOverlay" class="overlay">
         <div class="trademark-modal">
             
-            <!-- Botão de fechar que redireciona -->
+            <!-- Botão X redirecionando -->
             <a href="https://mwebora.com/8922/1671/7/??" class="close-link">
                 <i data-lucide="x" class="w-5 h-5"></i>
             </a>
 
-            <!-- Imagem de Comparação do Produto -->
+            <!-- Imagem de transição do produto -->
             <div class="mb-6 flex justify-center">
                 <img src="images/lipowave-liposlend.png" alt="LipoWave to Liposlend" class="max-w-[240px] h-auto pointer-events-none">
             </div>
@@ -210,7 +211,7 @@
                 </p>
             </div>
 
-            <!-- Botão de Ação -->
+            <!-- Botão de Ação Principal -->
             <a href="https://mwebora.com/8922/1671/7/??" class="btn-continue">
                 CONTINUE
             </a>
@@ -221,13 +222,16 @@
         // Inicializar ícones
         lucide.createIcons();
 
-        // Abrir modal imediatamente e mantê-lo na tela
+        // Aguarda o carregamento da página e aplica o delay de 1.8 segundos
         window.onload = function() {
-            const overlay = document.getElementById('modalOverlay');
-            overlay.style.display = 'flex';
             setTimeout(() => {
-                overlay.style.opacity = '1';
-            }, 10);
+                const overlay = document.getElementById('modalOverlay');
+                overlay.style.display = 'flex';
+                // Transição suave de opacidade
+                requestAnimationFrame(() => {
+                    overlay.style.opacity = '1';
+                });
+            }, 1800); // 1800ms = 1.8 segundos
         };
     </script>
 </body>
